@@ -1,4 +1,4 @@
-# Proyecto Calculadora de Propinas - Migración a useReducer
+# Calculadora de Propinas - Migración a useReducer
 
 Este proyecto consiste en la migración de una calculadora de propinas, originalmente construida con un hook personalizado, a utilizar el hook `useReducer` de React. Esta migración se realizó para mejorar la eficiencia y optimizar el rendimiento de la aplicación. El uso de `useReducer` permite una mejor gestión del estado y simplifica el manejo de acciones complejas en la aplicación.
 
