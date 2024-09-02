@@ -1,27 +1,73 @@
-# React + TypeScript + Vite
+# Proyecto Calculadora de Propinas - Migración a useReducer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto consiste en la migración de una calculadora de propinas, originalmente construida con un hook personalizado, a utilizar el hook `useReducer` de React. Esta migración se realizó para mejorar la eficiencia y optimizar el rendimiento de la aplicación. El uso de `useReducer` permite una mejor gestión del estado y simplifica el manejo de acciones complejas en la aplicación.
 
-Currently, two official plugins are available:
+Puedes ver la aplicación en acción [aquí](https://react-calculadora-propinas.netlify.app).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tabla de Contenidos
 
-## Expanding the ESLint configuration
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#instalación)
+- [Funcionalidades](#funcionalidades)
+- [Ventajas de useReducer](#ventajas-de-usereducer)
+- [Créditos](#créditos)
+- [Conclusión](#conclusión)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Descripción del Proyecto
 
-- Configure the top-level `parserOptions` property like this:
+La Calculadora de Propinas es una aplicación web que permite a los usuarios seleccionar alimentos para añadir a una orden de consumo. A medida que se agregan alimentos, la aplicación calcula el total a pagar basado en la cantidad y el precio de cada alimento. Además, los usuarios pueden:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **Eliminar Alimentos**: Quitar un alimento específico de la orden.
+- **Seleccionar un Porcentaje de Propina**: Elegir el porcentaje de propina que desean dejar.
+- **Calcular el Total a Pagar**: La aplicación calcula automáticamente el subtotal, la propina y el total a pagar, facilitando así el manejo de las cuentas.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologías Utilizadas
+
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **useReducer**: Hook de React utilizado para gestionar el estado de la aplicación de manera eficiente.
+- **Tailwind CSS**: Framework de CSS para estilizar la interfaz de manera rápida y responsiva.
+
+## Instalación
+
+Para ejecutar este proyecto localmente, sigue estos pasos:
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tuusuario/calculadora-propinas-migracion-usereducer.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd calculadora-propinas-migracion-usereducer
+    ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+## Funcionalidades
+
+- **Agregar Alimentos a la Orden**: Los usuarios pueden seleccionar alimentos para añadirlos a la orden de consumo.
+- **Eliminar Alimentos**: Permite quitar un alimento específico de la orden.
+- **Seleccionar Porcentaje de Propina**: Los usuarios pueden elegir el porcentaje de propina que desean dejar.
+- **Cálculo Automático**: Calcula automáticamente el subtotal, la propina y el total a pagar.
+
+## Ventajas de useReducer
+
+Migrar la aplicación a `useReducer` trajo varias ventajas significativas:
+
+- **Gestión Centralizada del Estado**: `useReducer` centraliza la lógica del estado, facilitando la gestión y la consistencia en la aplicación.
+- **Uso de Acciones Claras**: La utilización de acciones (`add`, `remove`, `updateTip`, `calculateTotal`) permite un manejo más estructurado y predecible del estado.
+- **Optimización del Código**: `useReducer` simplifica el código, especialmente en aplicaciones con lógica compleja, mejorando la legibilidad y el mantenimiento.
+
+## Créditos
+
+Este proyecto fue desarrollado como parte del curso de React y TypeScript de [codigoconjuan](https://codigoconjuan.com). Agradezco el conocimiento y los recursos proporcionados durante el curso, que me permitieron mejorar mis habilidades y optimizar esta aplicación.
+
+## Conclusión
+
+La migración de la Calculadora de Propinas a `useReducer` fue una experiencia enriquecedora que me permitió aprender y aplicar las ventajas de este hook en la optimización de aplicaciones React. Este enfoque no solo mejoró el rendimiento, sino que también simplificó la lógica del estado, haciéndola más escalable y mantenible para proyectos futuros.
